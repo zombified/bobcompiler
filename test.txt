@@ -1,0 +1,109 @@
+program iftest; begin
+
+	procedure pow( num base, num raise, num* result )
+	{
+		result = 1;
+		num i;
+		for i = 1 to raise step 1 do { result = result * base; }
+	}
+
+	num base;
+	num raise;
+	num result;
+	pow( base, raise, result );
+	write result;
+
+/*
+	procedure outer( num* x )
+	{
+		procedure outer( num x )
+		{
+			write x;
+		}
+	}
+*/
+
+	// out: print number that is input twice (once by value, once by reference
+//	procedure print_i( num toprint ) { write toprint; }
+//	procedure print_ir (num* toprint){write toprint;}
+
+//	num toprint;
+//	read toprint;
+//	print_i(toprint);
+//	print_ir ( toprint ) ;
+
+
+/*
+	// out: if user inputs "12" then: 0 1 0 1 0 1 0 1 0 1 0 1
+	//		if user inputs anything not "12" then: 2
+	num i;
+	for i = 0 to 4 step 5 do
+	{
+		num a;
+		read a;
+		if a == 3*2^2 then
+		{
+			a = -10;
+			num a = 0;
+			num b = 0;
+			num c = 1;
+
+			if a > b then { write 1; } else { write 0; } // 0
+			if c > a then { write 1; } else { write 0; } // 1
+
+			if a < b then { write 1; } else { write 0; } // 0
+			if a < c then { write 1; } else { write 0; } // 1
+
+			if a == c then { write 1; } else { write 0; } // 0
+			if a == b then { write 1; } else { write 0; } // 1
+
+			if a != b then { write 1; } else { write 0; } // 0
+			if a != c then { write 1; } else { write 0; } // 1
+
+			if a >= c then { write 1; } else { write 0; } // 0
+			if a >= b then { write 1; } else { write 0; } // 1
+
+			if c <= a then { write 1; } else { write 0; } // 0
+			if a <= b then { write 1; } else { write 0; } // 1
+		}
+		else
+		{
+			write 2;
+		}
+	}
+*/
+
+/*
+	// output: 6 306 6 3
+	num x = 2;
+	if x == 1 then
+	{
+		x = x + 1;
+		num x = 5 + x;
+		write x;
+		if x == 7 then
+		{
+			num x = 300;
+			write x;
+		}
+		write x;
+	}
+	else
+	{
+		x = x + 1;
+		num x = 3 + x;
+		write x;
+		if x == 5 then { write x; }
+		else
+		{
+			num x = 300 + x;
+			write x;
+		}
+		write x;
+	}
+	write x;
+*/
+
+
+
+end.
